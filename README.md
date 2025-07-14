@@ -6,6 +6,9 @@ The HexTech muscle board receives input through an MQTT Server. An MQTT client, 
 
 The software, programmed in Python, can publish messages to the MQTT broker.
 
+# Demo Video
+A video of the robot operating can be found and downloaded in [Demo (3).mp4](DEMO%20(3).mp4)
+
 # Assembly 
 Pictures, materials, and explanations of  assembly are provided in the file. 
 [Automatic Page Turner PDF](./Automatic%20Page%20Turner.pdf) 
@@ -18,4 +21,4 @@ The code was completed in VSCode using python from the Hextech Library. The comp
 - Adhesive needs to be replaced
 
 # Lessons Learned
-Before I built this robot and heard about Hextech I was not too familiar with coding, how motors worked, or building a robot from ground zero, but now I understand the many intricicies of how stepper motors function, how to successfully create a mchine, and how to effectively control hardware. Due to Hextech, I continue to grow my knowledge and experience in engineering quickly being able to interact mechanical components I build with python code I write. 
+Before I built this robot and heard about Hextech I was not too familiar with coding, how motors worked, or how to build a robot from ground zero, but now I understand the many intricicies of how stepper motors function, how to successfully create a mchine, and how to effectively control hardware. Due to Hextech, I continue to grow my knowledge and experience in engineering quickly being able to interact mechanical components I build with python code I write. 
