@@ -1,0 +1,54 @@
+import time
+from hextech import CommandGroupParallel, HexTechMuscle, Microsteps
+
+# Connect to the board
+muscle = HexTechMuscle()
+
+print("Waiting for pedal press...")
+
+while True:
+    if muscle.conn.in_waiting:
+        line = muscle.conn.readline().decode().strip()
+        print(f"Message from board: {line}")
+
+        if "Pin 2 changed to 0" in line:
+            print("Pedal pressed! Running page turner sequence...")
+
+            # === Setup stepper motor 0 ===
+            muscle.stepper0.set_speed(20000).run()
+            muscle.stepper0.set_current(800).run()
+            muscle.stepper0.set_acceleration(20000).run()
+            muscle.stepper0.set_microsteps(Microsteps.MS_4).run()
+
+            # === Setup stepper motor 1 ===
+            muscle.stepper1.set_speed(10000).run()
+            muscle.stepper1.set_current(800).run()
+            muscle.stepper1.set_acceleration(7000).run()
+
+            # === Perform page turn sequence ===
+
+            # Small pre-moves (if needed)
+            muscle.stepper1.move(10).run()
+            muscle.stepper1.move(-15).run()
+
+            # Slide arm & flip page at same time
+            muscle.run(CommandGroupParallel(
+                muscle.stepper0.move(-6000),
+                muscle.stepper1.move(-150)
+            ))
+
+            # Lift arm fully
+            muscle.stepper1.move(-1650).run()
+
+            # Wait for page to flip
+            time.sleep(5)
+
+            # Reset slide
+            muscle.stepper0.move(6000).run()
+
+            # Reset arm down
+            muscle.stepper1.move(1805).run()
+
+            print("Page turn done! Waiting for next pedal press...")
+
+    time.sleep(0.01)  # Avoid busy-waiting the CPU
