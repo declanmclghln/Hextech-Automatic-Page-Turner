@@ -14,8 +14,8 @@ Pictures, materials, and explanations of  assembly are provided in the file.
 [Automatic Page Turner PDF](./Automatic%20Page%20Turner.pdf) 
 
 # Code Overview
-The code was completed in VSCode using python from the Hextech Library. The completed code used is found in [Auto Page Turner](Hextech-Automatic-Page-Turner/CODE/auto%20page%20turner) . 
-EX: Moving stepper motors --> [muscle.stepper1.move().run()]
+The code was completed in VSCode using python from the Hextech Library. The completed code used is found in [Auto Page Turner](Hextech-Automatic-Page-Turner/CODE/auto%20page%20turner)
+Example: Moving stepper motors --> [muscle.stepper1.move().run()]
 
 
 
