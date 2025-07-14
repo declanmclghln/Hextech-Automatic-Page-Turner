@@ -1,6 +1,11 @@
 # Hextech-Automatic-Page-Turner
 Powered by the Hextech muscle board, the automatic page turner is used to flip sheet music on a music stand avoiding the need of a page flipper and preventing a muscian from stopping during a song. 
 
+# MQTT Server
+The HexTech muscle board receives input through an MQTT Server. An MQTT client, the HexTech board, establishes a connection with the MQTT broker. When the MQTT broker receives a message, it forwards it to subscribers (the HexTech board).
+
+The software, programmed in Python, can publish messages to the MQTT broker.
+
 # Assembly 
 Pictures, materials, and explanations of  assembly are provided in the file. 
 [Automatic Page Turner PDF](./Automatic%20Page%20Turner.pdf) 
