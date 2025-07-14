@@ -18,4 +18,4 @@ The code was completed in VSCode using python from the Hextech Library. The comp
 - Adhesive needs to be replaced
 
 # Lessons Learned
-Before I built this robot and heard about Hextech I was not too familiar with coding, how motors worked, or how to build a robot from ground zero, but now I understand the many intricicies of how stepper motors function, how to successfully create a mchine, and how to effectively control hardware. Due to Hextech, I continue to grow my knowledge and experience in engineering quickly being able to interact mechanical components I build with python code I write. 
+Before I built this robot and heard about Hextech I was not too familiar with coding, how motors worked, or how to build a robot from ground zero, but now I understand the many intricacies of how stepper motors function, how to successfully create a machine, and how to effectively control hardware. Due to Hextech, I continue to grow my knowledge and experience in engineering quickly being able to interact mechanical components I build with python code I write. 
